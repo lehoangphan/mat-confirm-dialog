@@ -7,10 +7,13 @@
   > updating
   * Manual Clone Source 
   > STEP: 
-  > 1. clone this source <p>
-  > 2. Copy to your Project <p>
+  > 1. clone this source
+  > 2. Copy to your Project 
 # Control Types 
   * MatConfirmDialog 
-  * MatConfirmDialogWithForm  
+  * MatConfirmDialogWithForm
+# Usages
+
+  
 
 
