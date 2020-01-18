@@ -34,8 +34,19 @@
   ] 
   })
   ```
+  
+   * First, customize your method for opening dialog 
+   ```
+   private openDialog(dialog, data) {
+    return this.dialog.open(dialog, {
+      width: '250px',
+      data: data,
+      disableClose: true })}
+   ```
+  
    * MatConfirmDialog 
    <P> use this when you need popup dialog with 2 option (YES / NO) (DELETE, CANCEL) (ACCEPT, DECLINE) .... <P>
+  
    ```
     readonly dialog = this.injector.get(MatDialog);
     
