@@ -6,8 +6,8 @@
   * NPM
   > updating
   * Manual Clone Source 
-  _ clone this source
-  _ Copy to your Project
+  1. clone this source <p>
+  2. Copy to your Project <p>
 # Control Types 
   * MatConfirmDialog 
   * MatConfirmDialogWithForm  
