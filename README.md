@@ -35,8 +35,29 @@
   })
   ```
    * MatConfirmDialog 
-   use this when you need popup dialog with 2 option (YES / NO) (DELETE, CANCEL) (ACCEPT, DECLINE) ....
+   <P> use this when you need popup dialog with 2 option (YES / NO) (DELETE, CANCEL) (ACCEPT, DECLINE) .... <P>
    ```
+    readonly dialog = this.injector.get(MatDialog);
+    
+    this.dialog.open(dialog, {
+      width: '250px',
+      data: {
+        title: 'DELETE',
+        content: 'ARE YOU SURE TO DELETE THIS FILE ?',
+        no_button: 'CANCEL',
+        yes_button: 'ACCEPT'
+        },
+      disableClose: true
+    }).afterClosed().subscribe(res => {
+      if (res.result === MatConfirmDialogResult.YES)
+        //
+        // do your code here, if user clicks yes 
+        //
+      else
+        //
+        //do your code here, if user clicks no
+        //
+    });
    
    ```
   
