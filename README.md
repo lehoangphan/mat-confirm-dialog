@@ -45,26 +45,23 @@
    ```
   
    * MatConfirmDialog 
-   <P> use this when you need popup dialog with 2 option (YES / NO) (DELETE, CANCEL) (ACCEPT, DECLINE) .... <P>
+   <P> use this when popup dialog with 2 option (YES / NO) (DELETE, CANCEL) (ACCEPT, DECLINE) .... <P>
   
    ```
-    readonly dialog = this.injector.get(MatDialog);
+   readonly dialog = this.injector.get(MatDialog);
     this.openDialog(MatConfirmDialogComponent, {
-      title: 'XÓA',
-      content: 'bạn có chắc muốn xóa ?',
-      no_button: 'HỦY',
-      yes_button: 'ĐỒNG Ý XÓA'
+      title: 'DELETE',
+      content: 'ARE YOU SURE TO DELETE THIS ?',
+      no_button: 'DECLINE',
+      yes_button: 'ACCEPT'
     }).afterClosed().subscribe(res => {
       if (res.result === MatConfirmDialogResult.YES)
         //
         // do your code here 
         //
+       else 
      });
     ```
-  
- 
- 
-
-  
-
-
+    * MatConfirmDialogWithForm
+    <p> use this when popup dialog with a form for user input (new Book, new infomation input) .... <P>
+    
