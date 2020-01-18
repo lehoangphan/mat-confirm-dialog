@@ -60,10 +60,40 @@
         // do your code here 
         //
        else 
-     });
-     ```
- 
+       })
+```   
      
    * MatConfirmDialogWithForm
     <p> use this when popup dialog with a form for user input (new Book, new infomation input) .... <P>
+  
+  ```
+  this.openDialog(MatConfirmDialogWithFormComponent, {
+      title: 'thêm mới',
+      content: 'bạn có muốn lưu?',
+      no_button: 'không',
+      yes_button: 'lưu',
+      form: {
+        model: { email: 'email@gmail.com' },
+        fields: [{
+          key: 'email',
+          type: 'input',
+          templateOptions: {
+            label: 'Email address',
+            placeholder: 'Enter email',
+            required: true,
+          }
+        }]
+      }
+    }).afterClosed().subscribe(res => {
+      console.log(res.result)
+      console.log(res.data)
+      // if (res.result === MatConfirmDialogResult.YES) 
+      //   console.log(res.data)
+      //   // this.createEmitter.emit()
+      // else 
+      // console.log("do nothing")
+
+    })
+```
+  
     
