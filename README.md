@@ -49,28 +49,18 @@
   
    ```
     readonly dialog = this.injector.get(MatDialog);
-    
-    this.dialog.open(dialog, {
-      width: '250px',
-      data: {
-        title: 'DELETE',
-        content: 'ARE YOU SURE TO DELETE THIS FILE ?',
-        no_button: 'CANCEL',
-        yes_button: 'ACCEPT'
-        },
-      disableClose: true
+    this.openDialog(MatConfirmDialogComponent, {
+      title: 'XÓA',
+      content: 'bạn có chắc muốn xóa ?',
+      no_button: 'HỦY',
+      yes_button: 'ĐỒNG Ý XÓA'
     }).afterClosed().subscribe(res => {
       if (res.result === MatConfirmDialogResult.YES)
         //
-        // do your code here, if user clicks yes 
+        // do your code here 
         //
-      else
-        //
-        //do your code here, if user clicks no
-        //
-    });
-   
-   ```
+     });
+    ```
   
  
  
