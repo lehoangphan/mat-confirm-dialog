@@ -1,0 +1,13 @@
+<h2 mat-dialog-title>{{title}}</h2>
+
+<form [formGroup]="form">
+  <formly-form [form]="form" [fields]="fields" [model]="model"></formly-form>
+  <!-- <button type="submit" class="btn btn-default">Submit</button> -->
+  <mat-dialog-content>{{content}}</mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-button (click)="confirm(1)">{{no_button}}</button>
+    <!-- The mat-dialog-close directive optionally accepts a value as a result for the dialog. -->
+    <button mat-button (click)="confirm(0)" [disabled]="form.invalid" >{{yes_button}}</button>
+</mat-dialog-actions>
+</form>
+
