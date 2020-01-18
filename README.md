@@ -1,7 +1,7 @@
 # mat-confirm-dialog
   Simple dialog control for Angular 
 # Control Types 
-  -MatConfirmDialog (YesNoDialog) 
+  -MatConfirmDialog (YesNoDialog) \n
   -MatConfirmDialogWithForm 
 
 Library extend from @AngularMaterial/MatDialog;
