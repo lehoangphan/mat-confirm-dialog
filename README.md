@@ -54,14 +54,14 @@
       content: 'ARE YOU SURE TO DELETE THIS ?',
       no_button: 'DECLINE',
       yes_button: 'ACCEPT'
-    }).afterClosed().subscribe({ result, data } => {
-      if (result === MatConfirmDialogResult.YES)
+    }).afterClosed().subscribe(res => {
+      if (res.result === MatConfirmDialogResult.YES)
         //
         // do your code here 
         //
        else
         // do your code here
-       console.log(data) 
+       console.log(res.data) 
         //dialog still return the data, but was null
        
        })
@@ -88,14 +88,14 @@
           }
         }]
       }
-    }).afterClosed().subscribe({ result, data } => {
-      if (result === MatConfirmDialogResult.YES)
+    }).afterClosed().subscribe(res => {
+      if (res.result === MatConfirmDialogResult.YES)
       //
       //   do your code here 
       // 
       else 
       //the form's data will be returned 
-      console.log(data)  
+      console.log(res.data)  
       //
       //
     })
