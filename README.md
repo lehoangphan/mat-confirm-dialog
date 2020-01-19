@@ -54,12 +54,16 @@
       content: 'ARE YOU SURE TO DELETE THIS ?',
       no_button: 'DECLINE',
       yes_button: 'ACCEPT'
-    }).afterClosed().subscribe(res => {
-      if (res.result === MatConfirmDialogResult.YES)
+    }).afterClosed().subscribe({ result, data } => {
+      if (result === MatConfirmDialogResult.YES)
         //
         // do your code here 
         //
-       else 
+       else
+        // do your code here
+       console.log(data) 
+        //dialog still return the data, but was null
+       
        })
 ```   
      
@@ -68,10 +72,10 @@
   
   ```
   this.openDialog(MatConfirmDialogWithFormComponent, {
-      title: 'thêm mới',
-      content: 'bạn có muốn lưu?',
-      no_button: 'không',
-      yes_button: 'lưu',
+      title: 'ADD NEW',
+      content: 'ARE YOU SURE TO SAVE?',
+      no_button: 'NO',
+      yes_button: 'YES',
       form: {
         model: { email: 'email@gmail.com' },
         fields: [{
@@ -84,16 +88,19 @@
           }
         }]
       }
-    }).afterClosed().subscribe(res => {
-      console.log(res.result)
-      console.log(res.data)
-      // if (res.result === MatConfirmDialogResult.YES) 
-      //   console.log(res.data)
-      //   // this.createEmitter.emit()
-      // else 
-      // console.log("do nothing")
-
+    }).afterClosed().subscribe({ result, data } => {
+      if (result === MatConfirmDialogResult.YES)
+      //
+      //   do your code here 
+      // 
+      else 
+      //the form's data will be returned 
+      console.log(data)  
+      //
+      //
     })
 ```
+## returned result 
+<p> dialog alway returns the click option (MatConfirmDialog.YES, MatconfirmDialog.NO) and data (null or form data) <p>
   
     
