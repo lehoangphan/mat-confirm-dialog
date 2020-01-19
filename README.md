@@ -49,6 +49,7 @@
   
    ```
    readonly dialog = this.injector.get(MatDialog);
+   
     this.openDialog(MatConfirmDialogComponent, {
       title: 'DELETE',
       content: 'ARE YOU SURE TO DELETE THIS ?',
@@ -71,6 +72,8 @@
     <p> use this when popup dialog with a form for user input (new Book, new infomation input) .... <P>
   
   ```
+  readonly dialog = this.injector.get(MatDialog);
+  
   this.openDialog(MatConfirmDialogWithFormComponent, {
       title: 'ADD NEW',
       content: 'ARE YOU SURE TO SAVE?',
